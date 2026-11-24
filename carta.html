@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Escribir Carta | Mi Carta a Santa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo"> MI CARTA <span>A SANTA</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="galeria.html">GALERÍA</a></li>
+            <li><a href="carta.html" class="active">ESCRIBIR CARTA</a></li>
+            <li><a href="lista.php">CARTAS ENVIADAS</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="section form-section">
+    <h2> MI CARTA A SANTA </h2>
+    <p class="subtitle">Querido Santa, este año me he portado...</p>
+    <form action="guardar.php" method="POST">
+        <label>Nombre del niño:</label>
+        <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
+        <label>Edad:</label>
+        <input type="number" name="edad" min="1" max="15" placeholder="Ej. 8" required>
+        <label>Ciudad:</label>
+        <input type="text" name="ciudad" placeholder="Ej. Ciudad Juárez" required>
+        <label>¿Te portaste bien?</label>
+        <select name="comportamiento" required>
+            <option value="">Elige una opción</option>
+            <option value="Muy bien">Muy bien </option>
+            <option value="Bien">Bien </option>
+            <option value="Más o menos">Más o menos </option>
+        </select>
+        <label>Regalo 1 que deseas:</label>
+        <input type="text" name="regalo1" placeholder="Ej. Bicicleta" required>
+        <label>Regalo 2 que deseas:</label>
+        <input type="text" name="regalo2" placeholder="Ej. Robot">
+        <label>Mensaje para Santa:</label>
+        <textarea name="mensaje" rows="4" placeholder="Querido Santa, este año quiero..."></textarea>
+        <button type="submit"> ENVIAR CARTA A SANTA </button>
+    </form>
+</section>
+<footer><p>Chesed Velazquez</p></footer>
+</body>
+</html>
